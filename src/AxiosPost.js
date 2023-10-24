@@ -20,6 +20,23 @@ const AxiosPost = () => {
         })
     }
 
+    function handleUpdate(e){
+        e.preventDefault();
+        axios.put("https://jsonplaceholder.typicode.com/users/1",inputData)
+        .then((respone)=>{
+            console.log(respone)
+        })
+    }
+
+    function handleDelete(e){
+        e.preventDefault();
+        axios.delete("https://jsonplaceholder.typicode.com/users/1")
+        .then((response)=>{
+            
+        })
+
+    }
+
     
 
   return (
@@ -29,6 +46,8 @@ const AxiosPost = () => {
       <lable>Last Name:</lable>
       <input type= "text" name ="lname" value={inputData.lname} onChange={handleData} />
         <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleUpdate}>Update</button>
+        <button onClick={handleDelete}>Delete</button>
 
 
     </>
