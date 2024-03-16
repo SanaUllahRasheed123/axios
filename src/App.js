@@ -26,7 +26,7 @@
 import React from 'react'
 
 const App = () => {
-  const z = 2;
+  const z = 2 ;
 
   
   return (
