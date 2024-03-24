@@ -22,24 +22,40 @@
 
 // export default App
 
+// import React from 'react'
 
-import React from 'react'
+// const App = () => {
+//   const z = 2 ;
 
-const App = () => {
-  const z = 2 ;
+//   return (
+//     <>
+//     <div style={{textAlign:'center', fontSize:'sans serif'}}>
+//     <h1>Hello The value of varible is {3+5}</h1>
+//     <h2>Hrllo</h2>
+//     <p>{(z)<5?'Greater':'Smaller'}</p>
+//     </div>
 
-  
+//     </>
+
+//   )
+// }
+
+// export default App
+
+import React from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+function App() {
+  const notify = () => toast("Wow Sana Ullah How are you!");
+
   return (
-    <>
-    <div style={{textAlign:'center', fontSize:'sans serif'}}>
-    <h1>Hello The value of varible is {3+5}</h1>
-    <h2>Hrllo</h2>
-    <p>{(z)<5?'Greater':'Smaller'}</p>
+    <div>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer />
     </div>
-       
-    </>
-  
-  )
+  );
 }
 
-export default App
+export default App;
